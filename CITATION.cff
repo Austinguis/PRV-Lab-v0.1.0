@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use PRV-Lab in research, please cite the repository release you used."
+title: "PRV-Lab: Reproducible Privacy Accounting Research Toolkit"
+version: 0.1.0
+authors:
+  - name: "PRV-Lab contributors"
+repository-code: "https://github.com/Austinguis/PRV-Lab-v0.1.0"
+date-released: 2026-10-21
+type: software
+license: MIT
+abstract: >-
+  A research toolkit for reproducible differential-privacy accounting experiments,
+  analytic Gaussian reference curves, and optional adapters to established PRV accounting code.

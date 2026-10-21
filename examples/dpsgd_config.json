@@ -1,0 +1,9 @@
+{
+  "description": "Illustrative DP-SGD parameters; not a privacy guarantee by itself.",
+  "sampling_probability": 0.01,
+  "noise_multiplier": 1.2,
+  "steps": 1000,
+  "delta": 1e-5,
+  "eps_error": 0.01,
+  "delta_error": 1e-8
+}

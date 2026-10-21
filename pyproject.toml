@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=77.0.3", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prv-lab"
+version = "0.1.0"
+description = "Reproducible privacy-accounting experiments and PRV curve diagnostics"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "PRV-Lab contributors" }]
+keywords = ["differential-privacy", "privacy-accounting", "PRV", "DP-SGD", "reproducibility"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Mathematics",
+]
+dependencies = [
+  "numpy>=1.23",
+  "scipy>=1.9",
+  "matplotlib>=3.6",
+]
+
+[project.optional-dependencies]
+prv = ["prv-accountant>=0.2.0"]
+dev = ["pytest>=7.4", "ruff>=0.4", "build>=1.2"]
+all = ["prv-accountant>=0.2.0", "pytest>=7.4", "ruff>=0.4", "build>=1.2"]
+
+[project.scripts]
+prv-lab = "prv_lab.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/Austinguis/PRV-Lab-v0.1.0"
+Issues = "https://github.com/Austinguis/PRV-Lab-v0.1.0/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
